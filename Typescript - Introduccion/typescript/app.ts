@@ -1,18 +1,17 @@
-(function() {
-
+(() => {
     
-    const enviarMision = ( xmen: { nombre: string } ) => {
-        console.log(`Enviando a ${ xmen.nombre } a la misión.`);
-    }
-    const regresarAlCuartel = ( xmen: { nombre: string } ) => {
-        console.log(`Enviando a ${ xmen.nombre } al cuartel.`);
-    }
+    const sumar = ( a: number, b: number ): number => a + b;
+    
+    const nombre = ( ): string => 'Hola Fernando';
 
-    const wolverine = {
-        nombre: 'Logan',
-        edad: 60
+    const obtenerSalario = (): Promise<string> => {
+
+        return new Promise (( resolve, reject) => {
+            resolve('Felix');
+        });
+
     }
+        
+    obtenerSalario().then( console.log );
 
-    enviarMision( wolverine );
-
-})
+})();

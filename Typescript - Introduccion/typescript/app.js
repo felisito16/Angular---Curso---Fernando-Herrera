@@ -1,14 +1,11 @@
 "use strict";
-(function () {
-    const enviarMision = (xmen) => {
-        console.log(`Enviando a ${xmen.nombre} a la misión.`);
+(() => {
+    const sumar = (a, b) => a + b;
+    const nombre = () => 'Hola Fernando';
+    const obtenerSalario = () => {
+        return new Promise((resolve, reject) => {
+            resolve('Felix');
+        });
     };
-    const regresarAlCuartel = (xmen) => {
-        console.log(`Enviando a ${xmen.nombre} al cuartel.`);
-    };
-    const wolverine = {
-        nombre: 'Logan',
-        edad: 60
-    };
-    enviarMision(wolverine);
-});
+    obtenerSalario().then(console.log);
+})();
